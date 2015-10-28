@@ -10,7 +10,7 @@ usearch -cluster_fast cds.fasta -id 0.60 -centroids centroids.fasta -consout con
 sort -nk2 clusters.uc > clusters_sorted.uc
 
 #make a table of results, pangenome.txt
-python ~/s/gene-matrix-from-uclust2.py clusters_sorted.uc pangenome.txt 95
+python ~/s/gene-matrix-from-uclust2.py clusters_sorted.uc pangenome.txt 60
 
 #annotate the list of cds
 python ~/s/cds_annotation.py centroids.fasta nr cds.blast p 1e-5
